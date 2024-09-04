@@ -1,0 +1,31 @@
+public class TwoSum {
+	static boolean sum(int arr[],int ele) {
+		boolean ans=false;
+		int l=0;
+		int r=arr.length-1;
+		while(l<r) {
+			
+			if(arr[l]+arr[r]==ele) {
+				System.out.println(l+" "+r);
+				ans=true;
+				l++;
+				r--;
+			}
+			else if(arr[l]+arr[r]>ele) {
+				r--;
+			}
+			else
+				l++;
+			
+		}
+		return ans;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[]= {3,2,4};
+		System.out.println(sum(arr,6));
+
+	}
+
+}
