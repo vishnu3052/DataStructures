@@ -1,0 +1,22 @@
+public class LengthOfOnes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[]= {0,1,0,1,1,1,0,1,0,1,1,0,1,1,0,1};
+		int curcnt=0;
+		int maxcnt=0;
+		for(int i=0;i<arr.length-1;i++) {
+			if(arr[i]==1) {
+				curcnt++;
+			}
+			if(curcnt>maxcnt) {
+				maxcnt=curcnt;
+			}
+			if(arr[i]==0) {
+				curcnt=0;
+			}
+		}
+		System.out.println(maxcnt);
+	}
+
+}
