@@ -1,0 +1,53 @@
+import java.io.*;
+public class Majority2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[]= {1,2,3,1,2,2,1,1,2};
+		int cnt1=0;
+		int cnt2=0;
+		int ele1=Integer.MIN_VALUE;
+		int ele2=ele1;
+		for(int i=0;i<arr.length;i++) {
+			if(cnt1==0 && ele2!=arr[i]) {
+				ele1=arr[i];
+				cnt1++;
+			}
+			else if(cnt2==0 && ele1!=arr[i]) {
+				ele2=arr[i];
+				cnt2++;
+			}
+			else if(arr[i]==ele1) {
+				cnt1++;
+			}
+			else if(arr[i]==ele2) {
+				cnt2++;
+				
+			}
+			else {
+				cnt1--;
+				cnt2--;
+			}
+		}
+		int n=countElement(arr,ele1);
+		int m=countElement(arr,ele2);
+		if(n>(arr.length/3)) {
+			System.out.println("Majority Element:"+ele1);
+		}
+		if(m>(arr.length/3)) {
+			System.out.println("Majority Element:"+ele2);
+		}
+
+	}
+
+	private static int countElement(int[] arr, int ele1) {
+		int count=0;
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]==ele1) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+}
