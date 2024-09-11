@@ -1,0 +1,30 @@
+public class AlphaHill {
+
+	public static void main(String[] args) {
+		int n=5;
+		alphaHill(n);
+
+	}
+
+	private static void alphaHill(int n) {
+		int ch=65;
+		for(int i=1;i<=n;i++) {
+			for(int sp=1;sp<=n-i;sp++) {
+				System.out.print("  ");
+			}
+			int j=0;
+			for(j=0;j<i;j++) {
+				char c=(char) (ch+j);
+				System.out.print(c+" ");
+			}
+			for(int k=j-2;k>=0;k--) {
+				char c=(char)(ch+k);
+				System.out.print(c+" ");
+			}
+			System.out.println();
+		}
+		
+		
+	}
+
+}
