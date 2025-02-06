@@ -13,7 +13,7 @@ public class KthMissingPositiveNumber {
 
 	}
 
-	private static int findKthPositive(int[] arr, int k) {
+	private static int findKthPositive(int[] nums, int k) {
 		int n=nums.length;
         int low = 0, high = n - 1;
         while (low <= high) {
