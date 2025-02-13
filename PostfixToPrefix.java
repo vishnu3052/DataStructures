@@ -6,11 +6,11 @@ public class PostfixToPrefix {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		String str=sc.next();
-		System.out.println(postfixToInfix(str));
+		System.out.println(postfixToPrefix(str));
 
 	}
 
-	private static String postfixToInfix(String str) {
+	private static String postfixToPrefix(String str) {
 		Stack<String>st=new Stack<>();
         for(int i=0;i<str.length();i++){
             char ch=str.charAt(i);
